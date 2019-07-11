@@ -2,6 +2,7 @@
 
 import 'package:favmovie/model/entity.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class MovieBox extends StatelessWidget {
 
@@ -14,12 +15,14 @@ class MovieBox extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Container(
-      child: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            Center(child: Text(movieData.title)),
-          ],
+      child: Card(
+        child: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              Center(child: Text(movieData.title)),
+            ],
+          ),
         ),
       ),
     );
