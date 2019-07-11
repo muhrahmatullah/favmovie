@@ -6,7 +6,7 @@ import 'dart:async';
 import 'dart:convert' show json, utf8;
 import 'dart:io';
 
-import 'package:favmovie/constants.dart';
+import 'package:favmovie/util/constants.dart';
 
 /// For this app, the only [Category] endpoint we retrieve from an API is Currency.
 ///

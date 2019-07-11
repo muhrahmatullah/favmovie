@@ -1,6 +1,7 @@
 import 'dart:developer';
 
-import 'package:favmovie/api.dart';
+import 'package:favmovie/network/api.dart';
+import 'package:favmovie/ui/movie_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -10,10 +11,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MovieScreen(title: 'Flutter Demo Home Page'),
     );
   }
 }
