@@ -58,7 +58,7 @@ class _MovieScreenState extends State<MovieScreen> {
       ),
       body: Container(child:
           ListView.builder(itemBuilder: (BuildContext context, int index) {
-        return Text(_results[index].title);
+        return MovieBox(movieData: _results[index],);
       }, itemCount: _results.length,)),
     );
   }
