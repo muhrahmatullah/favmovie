@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      home: MovieScreen(title: 'Flutter Demo Home Page'),
+      home: MovieScreen(title: 'Fav Movie'),
     );
   }
 }
