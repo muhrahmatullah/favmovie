@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:favmovie/api.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -31,6 +34,20 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _counter++;
     });
+  }
+
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchMovieData();
+  }
+
+  Future<void> _fetchMovieData() async{
+
+    final api = Api();
+    final jsonResult = await api.fetchMovieList('popular');
+    print(jsonResult);
   }
 
   @override
