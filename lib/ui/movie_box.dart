@@ -18,15 +18,19 @@ class MovieBox extends StatelessWidget {
           padding: EdgeInsets.all(16.0),
           child: Column(
             children: [
-              Stack(
-                children: [
-                    Center(child: CircularProgressIndicator()),
-                  Center(
-                    child: FadeInImage.memoryNetwork(
-                        placeholder: kTransparentImage,
-                        image: base_poster + movieData.imageUrl),
-                  ),
-                ],
+              Container(
+                child: Stack(
+                  children: [
+                    Container(
+                        margin: EdgeInsets.only(top: 18.0),
+                        child: Center(child: CircularProgressIndicator())),
+                    Center(
+                      child: FadeInImage.memoryNetwork(
+                          placeholder: kTransparentImage,
+                          image: base_poster + movieData.imageUrl),
+                    ),
+                  ],
+                ),
               ),
               Center(child: Text(movieData.title)),
             ],
